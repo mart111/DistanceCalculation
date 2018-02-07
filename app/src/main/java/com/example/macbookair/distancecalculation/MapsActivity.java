@@ -22,7 +22,7 @@ import com.google.maps.android.SphericalUtil;
 /**
  * Run app and tap the screen anywhere to add 2 markers.
  * Please don't try to add markers more than two.
- * After adding them, app shows you distance between markers in km.
+ * After adding them, app shows you distance between markers in km (using Toast).
  * THANKS.
  */
 
