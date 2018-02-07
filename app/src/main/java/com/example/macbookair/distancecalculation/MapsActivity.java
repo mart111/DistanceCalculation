@@ -3,6 +3,7 @@ package com.example.macbookair.distancecalculation;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
@@ -76,12 +77,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     marker2 = mMap.addMarker(new MarkerOptions().position(position2));
 
                 if (position1 != null && position2 != null) {
-                    mMap.addPolyline(new PolylineOptions().add(position1, position2).width(6));
+                    mMap.addPolyline(new PolylineOptions().add(position1, position2).width(6).color(Color.BLUE));
                     double disanceD = SphericalUtil.computeDistanceBetween(position1, position2);
                     int distance = (int) disanceD / 1000;// show distance with KM
                     Toast.makeText(getApplicationContext(), "Approx. Distance: " + distance + "km", Toast.LENGTH_LONG).show();
                 }
-
             }
         });
 
